@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ALORA BAKERY — Premium artisan bakery in Mumbai. Handcrafted cakes, breads, pastries, shakes & cheesecakes. Order online or visit our stores in Andheri, Juhu, Bandra & Malad.">
+  <meta name="keywords" content="ALORA BAKERY, Mumbai bakery, artisan cakes, premium pastries, online cake order, best bakery Mumbai">
+  <title>ALORA BAKERY — Where Every Bite Tells a Story</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23C41E3A'/></svg>">
+</head>
+<body>
+
+  <!-- ============================================================
+       INTRO OVERLAY — Opening Scene
+       ============================================================ -->
+  <div id="intro-overlay">
+    <div class="intro-particles"></div>
+
+    <!-- SVG Logo -->
+    <svg class="intro-logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 10 C30 10, 10 30, 10 55 C10 80, 30 100, 60 110 C90 100, 110 80, 110 55 C110 30, 90 10, 60 10 Z" stroke-linecap="round"/>
+      <path class="fill-path" d="M45 50 C45 40, 55 35, 60 40 C65 35, 75 40, 75 50 C75 65, 60 75, 60 75 C60 75, 45 65, 45 50 Z"/>
+      <circle class="fill-path" cx="50" cy="42" r="3" fill="#C9A96E"/>
+      <circle class="fill-path" cx="70" cy="42" r="3" fill="#C9A96E"/>
+      <circle class="fill-path" cx="60" cy="55" r="2.5" fill="#C9A96E"/>
+    </svg>
+
+    <h1 class="intro-brand-name">ALORA</h1>
+    <p class="intro-tagline">Where Every Bite Tells a Story</p>
+
+    <button class="intro-skip" aria-label="Skip intro">Skip ›</button>
+  </div>
+
+  <!-- ============================================================
+       PROMO BANNER — 15% Off Marquee
+       ============================================================ -->
+  <div id="promo-banner">
+    <div class="banner-track">
+      <span class="banner-item"><span class="emoji">✦</span> 15% OFF on all online orders · Use code ALORA15 <span class="emoji">✦</span></span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item">Free delivery on orders above ₹999</span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item">Freshly baked every morning · No preservatives</span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item"><span class="emoji">✦</span> 15% OFF on all online orders · Use code ALORA15 <span class="emoji">✦</span></span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item">Free delivery on orders above ₹999</span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item">Freshly baked every morning · No preservatives</span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item"><span class="emoji">✦</span> 15% OFF on all online orders · Use code ALORA15 <span class="emoji">✦</span></span>
+      <span class="banner-divider">◆</span>
+      <span class="banner-item">Free delivery on orders above ₹999</span>
+      <span class="banner-divider">◆</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav id="main-nav">
+    <a href="#hero" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 10 C30 10, 10 30, 10 55 C10 80, 30 100, 60 110 C90 100, 110 80, 110 55 C110 30, 90 10, 60 10 Z" fill="none" stroke="#8B1A1A" stroke-width="3"/>
+        <path d="M45 50 C45 40, 55 35, 60 40 C65 35, 75 40, 75 50 C75 65, 60 75, 60 75 C60 75, 45 65, 45 50 Z" fill="#C41E3A"/>
+        <circle cx="50" cy="42" r="3" fill="#C9A96E"/>
+        <circle cx="70" cy="42" r="3" fill="#C9A96E"/>
+        <circle cx="60" cy="55" r="2.5" fill="#C9A96E"/>
+      </svg>
+      <span class="nav-logo-text">ALORA</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#stores">Stores</a></li>
+      <li><a href="#experience">Quiz</a></li>
+    </ul>
+
+    <button class="nav-cart" aria-label="Open cart">
+      🛒 Cart <span class="cart-count">0</span>
+    </button>
+  </nav>
+
+  <!-- ============================================================
+       SCREEN 1: HERO
+       ============================================================ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img class="hero-bg-image" src="assets/images/hero_bakery.png"
+           alt="ALORA Bakery interior"
+           onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1A0A0A 0%, #3D1C0E 50%, #8B1A1A 100%)';">
+    </div>
+    <div class="hero-gradient-motion"></div>
+    <div class="hero-particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-logo-container">
+        <svg class="hero-logo-img" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 10 C30 10, 10 30, 10 55 C10 80, 30 100, 60 110 C90 100, 110 80, 110 55 C110 30, 90 10, 60 10 Z" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+          <path d="M45 50 C45 40, 55 35, 60 40 C65 35, 75 40, 75 50 C75 65, 60 75, 60 75 C60 75, 45 65, 45 50 Z" fill="#E63946"/>
+          <circle cx="50" cy="42" r="3" fill="#C9A96E"/>
+          <circle cx="70" cy="42" r="3" fill="#C9A96E"/>
+          <circle cx="60" cy="55" r="2.5" fill="#C9A96E"/>
+        </svg>
+      </div>
+
+      <h1 class="hero-title">
+        ALORA
+      </h1>
+      <p class="hero-subtitle">Where Every Bite Tells a Story</p>
+
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#stores" class="btn btn-outline">Find a Store</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Tap below to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTERACTIVE HUB NAVIGATION
+       ============================================================ -->
+  <div id="hub-nav" class="hub-nav reveal">
+    <div class="hub-nav-container">
+      <button class="hub-tab active" data-target="story">Our Story</button>
+      <button class="hub-tab" data-target="menu">Signature Menu</button>
+      <button class="hub-tab" data-target="stores">Boutiques</button>
+      <button class="hub-tab" data-target="experience">Taste Profile</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCREEN 2: OUR STORY
+       ============================================================ -->
+  <section id="story" class="hub-section active">
+    <div class="story-container">
+      <div class="reveal">
+        <span class="section-badge">Our Journey</span>
+        <h2 class="section-title">A Story Baked <span class="accent">with Love</span></h2>
+        <p class="section-subtitle">From a small kitchen in Mumbai to four stores across the city — every crumb has a tale.</p>
+      </div>
+
+      <div class="story-layout">
+        <!-- Story Image -->
+        <div class="story-image-wrapper reveal-left">
+          <img src="assets/images/bakery_story.png" alt="ALORA Bakery humble beginnings"
+               onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #D4A574, #8B6914)';">
+          <div class="story-image-overlay">
+            <span class="year">Since 2018</span>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="story-timeline reveal-right">
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2018</span>
+            <h3 class="timeline-title">A Small Kitchen, A Big Dream</h3>
+            <p class="timeline-desc">Chef Alora started baking from her tiny Mumbai apartment kitchen, selling to friends and neighbours. Word spread like butter on warm bread — her red velvet cake became legendary in the neighbourhood.</p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2020</span>
+            <h3 class="timeline-title">Our First Store in Bandra</h3>
+            <p class="timeline-desc">Despite the challenging times, ALORA opened its first store on Turner Road, Bandra. The cherry-red storefront became an instant landmark, drawing crowds for freshly baked sourdough and handcrafted pastries.</p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2022</span>
+            <h3 class="timeline-title">4 Stores Across Mumbai</h3>
+            <p class="timeline-desc">With overwhelming love from Mumbai, ALORA expanded to Andheri, Juhu, and Malad. Each store carries the same warmth and quality, with recipes perfected over thousands of batches.</p>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">Award-Winning Artisan Bakery</h3>
+            <p class="timeline-desc">Named "Mumbai's Best Artisan Bakery" by Food Critics Guild. Our commitment to zero preservatives, locally sourced ingredients, and handcrafted techniques sets us apart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 3: THE MENU
+       ============================================================ -->
+  <section id="menu" class="hub-section">
+    <div class="menu-container">
+      <div class="menu-header reveal">
+        <span class="section-badge" style="border-color: rgba(201,169,110,0.4); color: var(--gold);">The Menu</span>
+        <h2 class="section-title">Crafted to <span class="accent">Perfection</span></h2>
+        <p class="section-subtitle">Every item is handcrafted daily with the finest ingredients. No shortcuts, no compromises.</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="category-tabs reveal">
+        <button class="category-tab active" data-category="all">All</button>
+        <button class="category-tab" data-category="cakes">Cakes</button>
+        <button class="category-tab" data-category="breads">Breads</button>
+      </div>
+
+      <!-- Product Grid (populated by JS) -->
+      <div id="product-grid" class="product-grid stagger-children"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 4: OUR STORES
+       ============================================================ -->
+  <section id="stores" class="hub-section">
+    <div class="stores-container">
+      <div class="stores-header reveal">
+        <span class="section-badge">📍 Visit Us</span>
+        <h2 class="section-title">Our <span class="accent">Stores</span></h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Four locations across Mumbai — each with its own charm, but the same ALORA magic.</p>
+      </div>
+
+      <!-- Store Cards -->
+      <div class="stores-grid stagger-children">
+
+        <!-- Andheri -->
+        <div class="store-card reveal">
+          <div class="store-image">
+            <img src="assets/images/store_andheri.png" alt="ALORA Andheri"
+                 onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #2D1515, #8B1A1A)';">
+            <span class="store-location-badge">📍 Andheri West</span>
+          </div>
+          <div class="store-details">
+            <h3 class="store-name">ALORA Andheri</h3>
+            <p class="store-address">Plot 14, Lokhandwala Complex, Andheri West</p>
+            <div class="store-hours"><span class="dot"></span> Open · 8:00 AM – 10:00 PM</div>
+            <div class="store-actions">
+              <button class="btn btn-cherry-outline btn-sm reserve-btn" data-store="ALORA Andheri">Reserve Table</button>
+              <button class="btn btn-sm store-toggle" style="color:var(--cherry);font-weight:600;">View Menu</button>
+            </div>
+          </div>
+          <div class="store-availability">
+            <h4 class="availability-title">Popular items at this store</h4>
+            <div class="availability-item">
+              <span>Red Velvet Dream</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Belgian Truffle</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Sourdough Boule</span>
+              <span class="availability-status status-few-left">⚡ Few Left</span>
+            </div>
+            <div class="availability-item">
+              <span>Classic Croissant</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Multigrain Harvest</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Dark Forest</span>
+              <span class="availability-status status-sold-out">Sold Out</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juhu -->
+        <div class="store-card reveal">
+          <div class="store-image">
+            <img src="assets/images/store_juhu.png" alt="ALORA Juhu"
+                 onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1A2A3A, #4A6A8A)';">
+            <span class="store-location-badge">📍 Juhu</span>
+          </div>
+          <div class="store-details">
+            <h3 class="store-name">ALORA Juhu</h3>
+            <p class="store-address">22, Juhu Tara Road, Juhu</p>
+            <div class="store-hours"><span class="dot"></span> Open · 8:00 AM – 11:00 PM</div>
+            <div class="store-actions">
+              <button class="btn btn-cherry-outline btn-sm reserve-btn" data-store="ALORA Juhu">Reserve Table</button>
+              <button class="btn btn-sm store-toggle" style="color:var(--cherry);font-weight:600;">View Menu</button>
+            </div>
+          </div>
+          <div class="store-availability">
+            <h4 class="availability-title">Popular items at this store</h4>
+            <div class="availability-item">
+              <span>Red Velvet Dream</span>
+              <span class="availability-status status-few-left">⚡ Few Left</span>
+            </div>
+            <div class="availability-item">
+              <span>Belgian Truffle</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Sourdough Boule</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Classic Croissant</span>
+              <span class="availability-status status-few-left">⚡ Few Left</span>
+            </div>
+            <div class="availability-item">
+              <span>Multigrain Harvest</span>
+              <span class="availability-status status-sold-out">Sold Out</span>
+            </div>
+            <div class="availability-item">
+              <span>Dark Forest</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bandra -->
+        <div class="store-card reveal">
+          <div class="store-image">
+            <img src="assets/images/store_bandra.png" alt="ALORA Bandra"
+                 onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #3D1C0E, #6B3A2A)';">
+            <span class="store-location-badge">📍 Bandra West</span>
+          </div>
+          <div class="store-details">
+            <h3 class="store-name">ALORA Bandra</h3>
+            <p class="store-address">Turner Road, Bandra West</p>
+            <div class="store-hours"><span class="dot"></span> Open · 7:30 AM – 11:30 PM</div>
+            <div class="store-actions">
+              <button class="btn btn-cherry-outline btn-sm reserve-btn" data-store="ALORA Bandra">Reserve Table</button>
+              <button class="btn btn-sm store-toggle" style="color:var(--cherry);font-weight:600;">View Menu</button>
+            </div>
+          </div>
+          <div class="store-availability">
+            <h4 class="availability-title">Popular items at this store</h4>
+            <div class="availability-item">
+              <span>Red Velvet Dream</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Belgian Truffle</span>
+              <span class="availability-status status-few-left">⚡ Few Left</span>
+            </div>
+            <div class="availability-item">
+              <span>Sourdough Boule</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Classic Croissant</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Multigrain Harvest</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Dark Forest</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Malad -->
+        <div class="store-card reveal">
+          <div class="store-image">
+            <img src="assets/images/store_malad.png" alt="ALORA Malad"
+                 onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #1A1A2E, #3D3D5C)';">
+            <span class="store-location-badge">📍 Malad West</span>
+          </div>
+          <div class="store-details">
+            <h3 class="store-name">ALORA Malad</h3>
+            <p class="store-address">Inorbit Mall, Link Road, Malad West</p>
+            <div class="store-hours"><span class="dot"></span> Open · 10:00 AM – 9:30 PM</div>
+            <div class="store-actions">
+              <button class="btn btn-cherry-outline btn-sm reserve-btn" data-store="ALORA Malad">Reserve Table</button>
+              <button class="btn btn-sm store-toggle" style="color:var(--cherry);font-weight:600;">View Menu</button>
+            </div>
+          </div>
+          <div class="store-availability">
+            <h4 class="availability-title">Popular items at this store</h4>
+            <div class="availability-item">
+              <span>Red Velvet Dream</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Belgian Truffle</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Sourdough Boule</span>
+              <span class="availability-status status-sold-out">Sold Out</span>
+            </div>
+            <div class="availability-item">
+              <span>Classic Croissant</span>
+              <span class="availability-status status-available">✅ Available</span>
+            </div>
+            <div class="availability-item">
+              <span>Multigrain Harvest</span>
+              <span class="availability-status status-few-left">⚡ Few Left</span>
+            </div>
+            <div class="availability-item">
+              <span>Dark Forest</span>
+              <span class="availability-status status-few-left">⚡ Few Left</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Checker -->
+      <div class="delivery-checker reveal">
+        <h3>🚚 Check Delivery to Your Area</h3>
+        <p>Enter your pincode and we'll find the nearest ALORA store that delivers to you.</p>
+        <div class="pincode-input-group">
+          <input type="text" id="pincode-input" class="pincode-input" placeholder="Enter 6-digit pincode" maxlength="6" inputmode="numeric">
+          <button id="pincode-check-btn" class="btn btn-primary btn-sm">Check</button>
+        </div>
+        <div id="delivery-results" class="delivery-results"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 5: EXPERIENCE ZONE — Quiz
+       ============================================================ -->
+  <section id="experience" class="hub-section">
+    <div class="experience-container">
+      <div class="experience-header reveal">
+        <span class="section-badge">🎯 Interactive</span>
+        <h2 class="section-title">What's Your <span class="accent">Perfect Cake?</span></h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Take our fun quiz and discover the ALORA cake that was made for you. It takes just 30 seconds!</p>
+      </div>
+
+      <div id="quiz-container" class="quiz-container reveal-scale">
+        <!-- Progress -->
+        <div class="quiz-progress">
+          <div class="quiz-progress-dot"></div>
+          <div class="quiz-progress-dot"></div>
+          <div class="quiz-progress-dot"></div>
+          <div class="quiz-progress-dot"></div>
+        </div>
+
+        <div class="quiz-questions-wrapper">
+          <!-- Q1 -->
+          <div class="quiz-question active">
+            <h3 class="quiz-q-text">Pick your vibe</h3>
+            <p class="quiz-q-sub">What mood are you in right now?</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="cozy" onclick="window.__selectQuizOption(0, 'cozy')">
+                <span class="quiz-option-emoji">A.</span>
+                <span class="quiz-option-label">Cozy</span>
+              </div>
+              <div class="quiz-option" data-value="adventurous" onclick="window.__selectQuizOption(0, 'adventurous')">
+                <span class="quiz-option-emoji">B.</span>
+                <span class="quiz-option-label">Adventurous</span>
+              </div>
+              <div class="quiz-option" data-value="classic" onclick="window.__selectQuizOption(0, 'classic')">
+                <span class="quiz-option-emoji">C.</span>
+                <span class="quiz-option-label">Classic</span>
+              </div>
+              <div class="quiz-option" data-value="bold" onclick="window.__selectQuizOption(0, 'bold')">
+                <span class="quiz-option-emoji">D.</span>
+                <span class="quiz-option-label">Bold</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question">
+            <h3 class="quiz-q-text">Your go-to flavour</h3>
+            <p class="quiz-q-sub">What makes your taste buds dance?</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="chocolate" onclick="window.__selectQuizOption(1, 'chocolate')">
+                <span class="quiz-option-emoji">A.</span>
+                <span class="quiz-option-label">Chocolate</span>
+              </div>
+              <div class="quiz-option" data-value="fruity" onclick="window.__selectQuizOption(1, 'fruity')">
+                <span class="quiz-option-emoji">B.</span>
+                <span class="quiz-option-label">Fruity</span>
+              </div>
+              <div class="quiz-option" data-value="nutty" onclick="window.__selectQuizOption(1, 'nutty')">
+                <span class="quiz-option-emoji">C.</span>
+                <span class="quiz-option-label">Nutty</span>
+              </div>
+              <div class="quiz-option" data-value="coffee" onclick="window.__selectQuizOption(1, 'coffee')">
+                <span class="quiz-option-emoji">D.</span>
+                <span class="quiz-option-label">Coffee</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question">
+            <h3 class="quiz-q-text">What's the occasion?</h3>
+            <p class="quiz-q-sub">Every moment deserves the perfect cake</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="birthday" onclick="window.__selectQuizOption(2, 'birthday')">
+                <span class="quiz-option-emoji">A.</span>
+                <span class="quiz-option-label">Birthday</span>
+              </div>
+              <div class="quiz-option" data-value="date" onclick="window.__selectQuizOption(2, 'date')">
+                <span class="quiz-option-emoji">B.</span>
+                <span class="quiz-option-label">Date Night</span>
+              </div>
+              <div class="quiz-option" data-value="casual" onclick="window.__selectQuizOption(2, 'casual')">
+                <span class="quiz-option-emoji">C.</span>
+                <span class="quiz-option-label">Just Because</span>
+              </div>
+              <div class="quiz-option" data-value="celebration" onclick="window.__selectQuizOption(2, 'celebration')">
+                <span class="quiz-option-emoji">D.</span>
+                <span class="quiz-option-label">Celebration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question">
+            <h3 class="quiz-q-text">Sweetness level</h3>
+            <p class="quiz-q-sub">How sweet do you like it?</p>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="subtle" onclick="window.__selectQuizOption(3, 'subtle')">
+                <span class="quiz-option-emoji">A.</span>
+                <span class="quiz-option-label">Subtle</span>
+              </div>
+              <div class="quiz-option" data-value="balanced" onclick="window.__selectQuizOption(3, 'balanced')">
+                <span class="quiz-option-emoji">B.</span>
+                <span class="quiz-option-label">Balanced</span>
+              </div>
+              <div class="quiz-option" data-value="rich" onclick="window.__selectQuizOption(3, 'rich')">
+                <span class="quiz-option-emoji">C.</span>
+                <span class="quiz-option-label">Rich</span>
+              </div>
+              <div class="quiz-option" data-value="maximum" onclick="window.__selectQuizOption(3, 'maximum')">
+                <span class="quiz-option-emoji">D.</span>
+                <span class="quiz-option-label">Maximum</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Result -->
+        <div id="quiz-result" class="quiz-result">
+          <h3 class="result-title">Your Perfect ALORA Cake is...</h3>
+          <img class="result-cake-image" src="assets/images/red_velvet_cake.png" alt="Your recommended cake"
+               onerror="this.style.background='linear-gradient(135deg,#8B1A1A,#C41E3A)';this.style.display='block';">
+          <h2 class="result-cake-name">Red Velvet Dream</h2>
+          <p class="result-desc">A description of why this cake is perfect for you.</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
+            <a href="#menu" class="btn btn-primary">Order Now — ₹899</a>
+            <button class="btn btn-cherry-outline" onclick="window.__resetQuiz()">Retake Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand reveal">
+          <h3 class="footer-brand-name">ALORA BAKERY</h3>
+          <p class="footer-brand-desc">Handcrafted artisan bakery in Mumbai. Every item is baked fresh daily with premium ingredients, zero preservatives, and a whole lot of love.</p>
+          <form id="newsletter-form" class="footer-newsletter">
+            <input type="email" placeholder="Your email" required aria-label="Email for newsletter">
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Instagram">Ig</a>
+            <a href="#" class="social-link" aria-label="Facebook">Fb</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">Wa</a>
+            <a href="#" class="social-link" aria-label="Twitter">Tw</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="reveal">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#menu">Full Menu</a></li>
+            <li><a href="#stores">Store Locator</a></li>
+            <li><a href="#experience">Cake Quiz</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="reveal">
+          <h4 class="footer-col-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Signature Cakes</a></li>
+            <li><a href="#menu">Artisan Breads</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="reveal">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+919876543210">Call: +91 98765 43210</a></li>
+            <li><a href="mailto:hello@alorabakery.in">Mail: hello@alorabakery.in</a></li>
+            <li><a href="#">WhatsApp Us</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 ALORA BAKERY. All rights reserved.</p>
+        <p class="footer-made-with">Baked with passion in Mumbai</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       RESERVATION MODAL
+       ============================================================ -->
+  <div id="reservation-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">🍽️ Reserve a Table</h3>
+        <button class="modal-close" aria-label="Close modal">✕</button>
+      </div>
+
+      <form id="reservation-form">
+        <input type="hidden" id="res-store" value="">
+
+        <div class="form-group">
+          <label class="form-label" for="res-name">Your Name</label>
+          <input type="text" id="res-name" class="form-input" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="res-phone">Phone Number</label>
+          <input type="tel" id="res-phone" class="form-input" placeholder="+91 98765 43210" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="res-date">Date</label>
+            <input type="date" id="res-date" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="res-time">Time</label>
+            <select id="res-time" class="form-select" required>
+              <option value="">Select time</option>
+              <option value="08:00">8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="21:00">9:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="res-guests">Party Size</label>
+          <select id="res-guests" class="form-select" required>
+            <option value="">How many guests?</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+          Confirm Reservation
+        </button>
+      </form>
+
+      <div id="reservation-success" class="reservation-success">
+        <div class="success-icon">✓</div>
+        <h3 class="success-title">Table Reserved!</h3>
+        <p class="success-msg">Your table has been reserved successfully.</p>
+        <button class="btn btn-cherry-outline mt-2" onclick="document.querySelectorAll('.modal-overlay').forEach(m=>m.classList.remove('active'));document.body.style.overflow='';">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CART SIDEBAR
+       ============================================================ -->
+  <div id="cart-backdrop" class="cart-backdrop"></div>
+  <aside id="cart-sidebar">
+    <div class="cart-header">
+      <h3 class="cart-title">🛒 Your Cart</h3>
+      <button id="cart-close" class="modal-close" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div id="cart-empty" class="cart-empty">
+      <div class="cart-empty-emoji">🧁</div>
+      <p class="cart-empty-text">Your cart is empty.<br>Time to add some treats!</p>
+      <a href="#menu" class="btn btn-cherry-outline btn-sm mt-2" onclick="document.getElementById('cart-sidebar').classList.remove('open');document.getElementById('cart-backdrop').classList.remove('show');document.body.style.overflow='';">
+        Browse Menu
+      </a>
+    </div>
+
+    <div id="cart-footer" class="cart-footer" style="display:none;">
+      <div class="cart-discount" id="cart-discount"></div>
+      <div class="cart-total">
+        <span class="cart-total-label">Total (after 15% off)</span>
+        <span class="cart-total-amount" id="cart-total-amount">₹0</span>
+      </div>
+      <button class="btn btn-primary" style="width:100%;justify-content:center;" onclick="alert('🎉 Order placed! (Demo)');">
+        Place Order
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       CHEF ALORA CHARACTER
+       ============================================================ -->
+  <div id="chef-alora">
+    <div class="chef-speech"></div>
+    <div class="chef-avatar" title="Click me!">
+      <span class="chef-avatar-emoji">👩‍🍳</span>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

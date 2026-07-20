@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Knotbridge</title>
+    <meta name="description" content="Explore our premium digital transformations and portfolio projects.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .portfolio-header {
+            padding: 160px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        .filter-tab {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--txt2);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-family: var(--inter);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-tab:hover, .filter-tab.active {
+            background: rgba(74, 222, 128, 0.1);
+            border-color: var(--g500);
+            color: var(--g400);
+        }
+        .port-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            padding-bottom: 100px;
+        }
+        .port-item {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .port-img {
+            height: 280px;
+            background: #111;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            overflow: hidden;
+            position: relative;
+        }
+        .port-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .port-item:hover .port-img img {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        .port-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--card) 0%, transparent 100%);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- SCROLL PROGRESS -->
+    <div id="scroll-prog" class="scroll-prog"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="pre-l"></div><div class="pre-r"></div>
+        <div class="pre-c">
+            <svg class="pre-svg" viewBox="0 0 200 80" fill="none">
+                <path class="pre-arch" d="M10 70 Q100 -15 190 70" stroke="url(#pg)" stroke-width="2.5" fill="none"/>
+                <line class="pre-base" x1="0" y1="70" x2="200" y2="70" stroke="url(#pg)" stroke-width="2.5"/>
+                <defs><linearGradient id="pg" x1="0" y1="0" x2="200" y2="0"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs>
+            </svg>
+            <div class="pre-txt"><span>K</span><span>N</span><span>O</span><span>T</span><span>B</span><span>R</span><span>I</span><span>D</span><span>G</span><span>E</span></div>
+        </div>
+    </div>
+
+    <!-- CURSOR -->
+    <div id="cur"></div>
+    <div id="ring"></div>
+
+    <!-- NAVBAR -->
+    <nav id="nav">
+        <a href="index.html#hero" class="n-brand">
+            <svg viewBox="0 0 120 50" fill="none" class="n-icon"><path d="M8 42Q60-5 112 42" stroke="url(#ng)" stroke-width="2.5" fill="none"/><line x1="4" y1="42" x2="116" y2="42" stroke="url(#ng)" stroke-width="2"/><defs><linearGradient id="ng"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg>
+            <span>KNOTBRIDGE</span>
+        </a>
+        <div class="n-links"><a href="index.html#services">Services</a><a href="index.html#assess">Assessment</a></div>
+        <a href="index.html#connect" class="n-cta magnetic">Let's Bridge the Gap <i>→</i></a>
+        <button id="burger" class="burger" aria-label="menu"><span></span><span></span></button>
+    </nav>
+
+    <div id="drawer" class="drawer">
+        <a href="index.html#services">Services</a><a href="index.html#assess">Assessment</a><a href="index.html#connect">Let's Bridge the Gap</a>
+    </div>
+
+    <!-- PORTFOLIO HEADER -->
+    <section class="portfolio-header">
+        <div class="glow-orb orb-1"></div>
+        <div class="sec-inner">
+            <span class="tag">— Our Work —</span>
+            <h2>Digital <em class="glow-text">Masterpieces</em></h2>
+            <p class="sub" style="margin-top: 16px;">Explore our portfolio of high-end web applications and aesthetic transformations.</p>
+        </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterPort('all', this)">All</button>
+        <button class="filter-tab" onclick="filterPort('hospitality', this)">Bakery / Hospitality</button>
+        <button class="filter-tab" onclick="filterPort('ecommerce', this)">E-Commerce</button>
+        <button class="filter-tab" onclick="filterPort('saas', this)">SaaS</button>
+    </div>
+
+    <!-- PORTFOLIO GRID -->
+    <div class="port-grid" id="portfolioGrid">
+        
+        <!-- ALORA BAKERY -->
+        <a href="portfolio/alora/index.html" target="_blank" class="glass-card port-item hospitality" style="--d:.05s">
+            <div class="port-img">
+                <img src="portfolio/alora/assets/images/red_velvet_cake.png" alt="Alora Bakery Dashboard" onerror="this.src='og-image.png'">
+            </div>
+            <h3 style="font-family:var(--serif); font-size:24px; color:#fff; margin-bottom:12px;">ALORA Bakery</h3>
+            <p style="color:var(--txt2); font-size:15px; margin-bottom:20px; line-height:1.6;">
+                A premium "Zero-Scroll" interactive dashboard for an artisanal bakery. Replacing traditional e-commerce scrolling with app-like state navigation, immersive animations, and dynamic product showcases.
+            </p>
+            <div class="pills"><span>Web App</span><span>UI/UX</span><span>Animation</span></div>
+            <div class="b-glow"></div>
+        </a>
+
+        <!-- PLACEHOLDER 1 -->
+        <a href="#" class="glass-card port-item saas" style="--d:.1s">
+            <div class="port-img" style="background:#0a1910;"></div>
+            <h3 style="font-family:var(--serif); font-size:24px; color:#fff; margin-bottom:12px;">FinTech SaaS</h3>
+            <p style="color:var(--txt2); font-size:15px; margin-bottom:20px; line-height:1.6;">
+                Automated reconciliation dashboard processing 1M+ transactions daily with real-time AI anomaly detection.
+            </p>
+            <div class="pills"><span>SaaS</span><span>React</span><span>Dashboard</span></div>
+            <div class="b-glow"></div>
+        </a>
+
+        <!-- PLACEHOLDER 2 -->
+        <a href="#" class="glass-card port-item ecommerce" style="--d:.15s">
+            <div class="port-img" style="background:#051410;"></div>
+            <h3 style="font-family:var(--serif); font-size:24px; color:#fff; margin-bottom:12px;">Luxe Apparel</h3>
+            <p style="color:var(--txt2); font-size:15px; margin-bottom:20px; line-height:1.6;">
+                Headless e-commerce architecture for a luxury fashion brand featuring sub-second page loads.
+            </p>
+            <div class="pills"><span>E-Commerce</span><span>Next.js</span></div>
+            <div class="b-glow"></div>
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft-top">
+            <div class="ft-brand">
+                <svg viewBox="0 0 120 50" fill="none" class="ft-ic"><path d="M8 42Q60-5 112 42" stroke="url(#fg)" stroke-width="2" fill="none"/><line x1="4" y1="42" x2="116" y2="42" stroke="url(#fg)" stroke-width="2"/><defs><linearGradient id="fg"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg>
+                <b>KNOTBRIDGE</b>
+                <p><em>Tying required tech to your business to grow, sustain, and be efficient.</em></p>
+            </div>
+            <div class="ft-cols">
+                <div><h4>Services</h4><a href="index.html#services">Tech Transformation</a><a href="index.html#services">Web & Apps</a><a href="index.html#services">AI Integration</a><a href="index.html#services">Marketing</a></div>
+                <div><h4>Company</h4><a href="index.html#hero">About</a><a href="index.html#assess">Assessment</a><a href="index.html#connect">Contact</a></div>
+            </div>
+        </div>
+        <div class="ft-bot"><p>&copy; 2024 Knotbridge</p><p>Made with purpose & precision</p></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Simple filtering logic
+        function filterPort(category, btnElement) {
+            // Update active tab
+            document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Filter items
+            const items = document.querySelectorAll('.port-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                    // Re-trigger animation
+                    item.style.animation = 'none';
+                    item.offsetHeight; // trigger reflow
+                    item.style.animation = 'panIn 0.5s ease forwards';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // Add animation keyframes for filtering
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes panIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
