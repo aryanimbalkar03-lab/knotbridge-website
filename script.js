@@ -484,22 +484,47 @@ window.resetWiz = function() {
 }
 
 // ─── 17. BOOKING FORM & HONEYPOT ───
-document.getElementById('book-form')?.addEventListener('submit', e => {
+document.getElementById('book-form')?.addEventListener('submit', async e => {
     e.preventDefault();
+    const btn = e.target.querySelector('button');
+    const ogText = btn.textContent;
+    btn.textContent = 'Sending...';
+
     // Honeypot check
     const hp = document.getElementById('b-hp');
     if (hp && hp.value) {
-        // Silently act like it succeeded to fool bots
         e.target.reset();
+        btn.textContent = ogText;
         return;
     }
+
     const name = document.getElementById('b-name').value;
     const phone = document.getElementById('b-phone').value;
     const purpose = document.getElementById('b-purpose').value;
     if (!name || !phone || !purpose) return;
-    document.getElementById('success').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-    e.target.reset();
+
+    try {
+        await fetch('https://formsubmit.co/ajax/aryanimbalkar08@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                Name: name,
+                Phone: phone,
+                Purpose: purpose,
+                _subject: 'New Lead from Knotbridge!'
+            })
+        });
+        document.getElementById('success').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        e.target.reset();
+    } catch (err) {
+        alert('Something went wrong. Please try again later.');
+    } finally {
+        btn.textContent = ogText;
+    }
 });
 
 window.closeOv = function() {
