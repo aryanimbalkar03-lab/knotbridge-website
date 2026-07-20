@@ -382,27 +382,41 @@
     });
 
     // Navbar scroll effect
-    let lastScroll = 0;
+    // Navbar scroll effect
+    let navTicking = false;
     window.addEventListener('scroll', () => {
-      const nav = document.getElementById('main-nav');
-      if (!nav) return;
       const scrollY = window.scrollY;
-      if (scrollY > 100) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
+      if (!navTicking) {
+        window.requestAnimationFrame(() => {
+          const nav = document.getElementById('main-nav');
+          if (nav) {
+            if (scrollY > 100) {
+              nav.classList.add('scrolled');
+            } else {
+              nav.classList.remove('scrolled');
+            }
+          }
+          navTicking = false;
+        });
+        navTicking = true;
       }
-      lastScroll = scrollY;
     }, { passive: true });
 
     // Hero parallax
     const heroBg = document.querySelector('.hero-bg-image');
     if (heroBg) {
+      heroBg.style.willChange = 'transform'; // Promote to GPU layer
+      let parallaxTicking = false;
       window.addEventListener('scroll', () => {
-        if (window.innerWidth <= 768) return; // Disable parallax on mobile for performance
         const scrollY = window.scrollY;
-        if (scrollY < window.innerHeight) {
-          heroBg.style.transform = `scale(1.1) translateY(${scrollY * 0.3}px)`;
+        if (!parallaxTicking) {
+          window.requestAnimationFrame(() => {
+            if (scrollY < window.innerHeight) {
+              heroBg.style.transform = `scale(1.1) translate3d(0, ${scrollY * 0.3}px, 0)`;
+            }
+            parallaxTicking = false;
+          });
+          parallaxTicking = true;
         }
       }, { passive: true });
     }
