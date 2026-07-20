@@ -2401,8 +2401,30 @@ input, select, textarea {
   .hero-title {
     font-size: clamp(2.5rem, 8vw, 5rem);
   }
+  .hub-tab {
+    flex-shrink: 0;
+  }
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    margin: 0;
+    overflow-x: hidden;
+  }
+  .product-grid .product-card {
+    min-width: unset;
+    max-width: unset;
+    flex: none;
+  }
+  .product-image {
+    height: 140px;
+  }
+  .product-title {
+    font-size: 1rem;
+  }
+  .product-price {
+    font-size: 0.9rem;
   }
   .stores-grid {
     grid-template-columns: 1fr;
