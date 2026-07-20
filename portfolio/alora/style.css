@@ -118,6 +118,8 @@ body {
   background-color: var(--cream);
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
   cursor: default;
 }
 
@@ -2388,6 +2390,11 @@ input, select, textarea {
   }
   .nav-links {
     display: none;
+  }
+  .hub-nav-container {
+    justify-content: flex-start;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
   .hero-title {
     font-size: clamp(2.5rem, 8vw, 5rem);
