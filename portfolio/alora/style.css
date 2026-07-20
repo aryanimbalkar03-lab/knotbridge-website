@@ -2423,12 +2423,23 @@ input, select, textarea {
     min-width: unset;
     max-width: unset;
     flex: none;
+    border-radius: 24px;
   }
-  .product-image {
-    height: 140px;
+  .product-image-container {
+    aspect-ratio: 1;
   }
-  .product-title {
-    font-size: 1rem;
+  .product-info {
+    padding: 12px;
+  }
+  .product-name {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+  }
+  .product-desc {
+    display: none;
   }
   .product-price {
     font-size: 0.9rem;
