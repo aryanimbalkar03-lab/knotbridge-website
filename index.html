@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knotbridge — Tying Tech To Your Business</title>
+    <meta name="description" content="Knotbridge ties required tech to your business to grow, sustain, and be efficient.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scroll-prog" class="scroll-prog"></div>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="pre-l"></div><div class="pre-r"></div>
+        <div class="pre-c">
+            <svg class="pre-svg" viewBox="0 0 200 80" fill="none">
+                <path class="pre-arch" d="M10 70 Q100 -15 190 70" stroke="url(#pg)" stroke-width="2.5" fill="none"/>
+                <line class="pre-base" x1="0" y1="70" x2="200" y2="70" stroke="url(#pg)" stroke-width="2.5"/>
+                <defs><linearGradient id="pg" x1="0" y1="0" x2="200" y2="0"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs>
+            </svg>
+            <div class="pre-txt"><span>K</span><span>N</span><span>O</span><span>T</span><span>B</span><span>R</span><span>I</span><span>D</span><span>G</span><span>E</span></div>
+        </div>
+    </div>
+
+    <!-- CURSOR -->
+    <div id="cur"></div>
+    <div id="ring"></div>
+
+    <!-- NAVBAR -->
+    <nav id="nav">
+        <a href="#hero" class="n-brand">
+            <svg viewBox="0 0 120 50" fill="none" class="n-icon"><path d="M8 42Q60-5 112 42" stroke="url(#ng)" stroke-width="2.5" fill="none"/><line x1="4" y1="42" x2="116" y2="42" stroke="url(#ng)" stroke-width="2"/><defs><linearGradient id="ng"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg>
+            <span>KNOTBRIDGE</span>
+        </a>
+        <div class="n-links"><a href="#services">Services</a><a href="#assess">Assessment</a></div>
+        <a href="#connect" class="n-cta magnetic">Let's Bridge the Gap <i>→</i></a>
+        <button id="burger" class="burger" aria-label="menu"><span></span><span></span></button>
+    </nav>
+
+    <div id="drawer" class="drawer">
+        <a href="#services">Services</a><a href="#assess">Assessment</a><a href="#connect">Let's Bridge the Gap</a>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+        <canvas id="three-canvas"></canvas>
+        <div class="grain"></div>
+        <div class="vignette"></div>
+        <div class="hero-body">
+            <p class="hero-badge anim" style="--d:.1s"><span class="dot-pulse"></span>Now Accepting New Clients · 2024</p>
+            <svg class="hero-mark anim-s" viewBox="0 0 240 110" fill="none">
+                <path d="M20 90Q120-20 220 90" stroke="url(#hg)" stroke-width="3" fill="none"/>
+                <path d="M40 90Q120 10 200 90" stroke="url(#hg)" stroke-width="2" fill="none" opacity=".5"/>
+                <path d="M60 90Q120 30 180 90" stroke="url(#hg)" stroke-width="1.5" fill="none" opacity=".25"/>
+                <line x1="10" y1="90" x2="230" y2="90" stroke="url(#hg)" stroke-width="3"/>
+                <line x1="60" y1="90" x2="60" y2="50" stroke="#4ADE80" stroke-width="1.5" opacity=".4"/>
+                <line x1="120" y1="90" x2="120" y2="10" stroke="#4ADE80" stroke-width="1.5" opacity=".3"/>
+                <line x1="180" y1="90" x2="180" y2="50" stroke="#4ADE80" stroke-width="1.5" opacity=".4"/>
+                <defs><linearGradient id="hg"><stop stop-color="#22C55E"/><stop offset=".5" stop-color="#4ADE80"/><stop offset="1" stop-color="#22C55E"/></linearGradient></defs>
+            </svg>
+            <h1 class="hero-title" id="hero-title">KNOTBRIDGE</h1>
+            <p class="hero-tag anim" style="--d:.85s"><em>Tying required tech to your business to <span class="glow-text">grow, sustain, and be efficient.</span></em></p>
+            <div class="hero-btns anim" style="--d:1.05s">
+                <a href="#connect" class="btn magnetic"><span>Let's Bridge the Gap</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                <a href="#services" class="btn-o magnetic"><span>Explore</span></a>
+            </div>
+        </div>
+        <div class="scroll-cue"><div class="scroll-bar"></div><span>Scroll</span></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee"><div class="mq-track"><span>TECH TRANSFORMATION</span><b>✦</b><span>WEB & APP DESIGN</span><b>✦</b><span>AI INTEGRATION</span><b>✦</b><span>MARKETING & BRANDING</span><b>✦</b><span>TECH TRANSFORMATION</span><b>✦</b><span>WEB & APP DESIGN</span><b>✦</b><span>AI INTEGRATION</span><b>✦</b><span>MARKETING & BRANDING</span><b>✦</b></div></div>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section id="services">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="sec-inner">
+            <div class="sec-head rv">
+                <span class="tag">— Our Expertise —</span>
+                <h2>What We <em class="glow-text">Bridge</em></h2>
+                <p class="sub">Four pillars of transformation connecting your vision to reality</p>
+            </div>
+            <div class="bento">
+                <!-- Card 1 -->
+                <div class="b-card b-lg tilt-card rv" style="--d:.05s">
+                    <div class="b-num">01</div>
+                    <div class="b-viz">
+                        <div class="viz-net">
+                            <div class="vn"></div><div class="vn"></div><div class="vn"></div><div class="vn"></div><div class="vn"></div>
+                            <svg viewBox="0 0 160 160"><line x1="80" y1="20" x2="20" y2="80" stroke="#4ADE80" stroke-width="1" opacity=".35"/><line x1="80" y1="20" x2="140" y2="80" stroke="#4ADE80" stroke-width="1" opacity=".35"/><line x1="20" y1="80" x2="55" y2="140" stroke="#4ADE80" stroke-width="1" opacity=".35"/><line x1="140" y1="80" x2="105" y2="140" stroke="#4ADE80" stroke-width="1" opacity=".35"/><line x1="55" y1="140" x2="105" y2="140" stroke="#4ADE80" stroke-width="1" opacity=".35"/></svg>
+                        </div>
+                    </div>
+                    <h3>Tech Transformation</h3>
+                    <p>Modernize infrastructure, migrate to cloud, digitize every workflow. We architect systems that scale with your ambition.</p>
+                    <div class="pills"><span>Cloud</span><span>Architecture</span><span>Legacy Modernization</span></div>
+                    <div class="b-glow"></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="b-card tilt-card rv" style="--d:.12s">
+                    <div class="b-num">02</div>
+                    <div class="b-viz">
+                        <div class="viz-scr">
+                            <div class="scr-d"><div class="scr-bar"><i></i><i></i><i></i></div><div class="scr-b"><div class="sl w7"></div><div class="sl w5"></div><div class="sl-blk"></div></div></div>
+                            <div class="scr-m"><div class="scr-b"><div class="sl w5"></div><div class="sl-blk sm"></div><div class="sl w7"></div></div></div>
+                        </div>
+                    </div>
+                    <h3>Web Design &<br>App Building</h3>
+                    <p>Pixel-perfect digital experiences that captivate and convert.</p>
+                    <div class="pills"><span>UI/UX</span><span>Web Apps</span><span>Mobile</span></div>
+                    <div class="b-glow"></div>
+                </div>
+                <!-- Card 3 -->
+                <div class="b-card tilt-card rv" style="--d:.19s">
+                    <div class="b-num">03</div>
+                    <div class="b-viz">
+                        <div class="viz-ai">
+                            <div class="ai-core"></div>
+                            <div class="ai-o o1"><div class="ai-e"></div></div>
+                            <div class="ai-o o2"><div class="ai-e"></div></div>
+                            <div class="ai-o o3"><div class="ai-e"></div></div>
+                        </div>
+                    </div>
+                    <h3>AI<br>Integration</h3>
+                    <p>Automate, predict, and scale with intelligent systems.</p>
+                    <div class="pills"><span>ML</span><span>Automation</span><span>Predictive</span></div>
+                    <div class="b-glow"></div>
+                </div>
+                <!-- Card 4 -->
+                <div class="b-card b-lg tilt-card rv" style="--d:.26s">
+                    <div class="b-num">04</div>
+                    <div class="b-viz">
+                        <div class="viz-chart">
+                            <svg viewBox="0 0 200 100">
+                                <rect class="cb" x="10" y="65" width="22" height="30" rx="3" fill="url(#gb)"/>
+                                <rect class="cb" x="42" y="48" width="22" height="47" rx="3" fill="url(#gb)"/>
+                                <rect class="cb" x="74" y="32" width="22" height="63" rx="3" fill="url(#gb)"/>
+                                <rect class="cb" x="106" y="18" width="22" height="77" rx="3" fill="url(#gb)"/>
+                                <rect class="cb" x="138" y="5" width="22" height="90" rx="3" fill="url(#gb)"/>
+                                <polyline class="cl" points="21,63 53,46 85,30 117,16 149,3" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2" stroke-linecap="round"/>
+                                <defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4ADE80"/><stop offset="1" stop-color="rgba(74,222,128,.2)"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Marketing & Branding</h3>
+                    <p>Build a brand that commands attention. Data-driven marketing that delivers compounding returns.</p>
+                    <div class="pills"><span>Brand Strategy</span><span>Performance</span><span>Growth</span></div>
+                    <div class="b-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ASSESSMENT ═══ -->
+    <section id="assess">
+        <div class="glow-orb orb-3"></div>
+        <div class="sec-inner">
+            <div class="sec-head rv">
+                <span class="tag">— Free Diagnostic —</span>
+                <h2>Does Your Business Need<br><em class="glow-text">Tech Transformation?</em></h2>
+                <p class="sub">Answer real questions about how you run your business. Our algorithm scores your tech maturity.</p>
+            </div>
+
+            <div class="glass-card wiz rv">
+                <div class="wiz-prog">
+                    <div class="wp active" data-s="1"><span>1</span>Business</div>
+                    <div class="wp" data-s="2"><span>2</span>Tech & Ops</div>
+                    <div class="wp" data-s="3"><span>3</span>Digital & Growth</div>
+                </div>
+                <div class="wiz-bar"><div class="wiz-fill" id="wfill"></div></div>
+
+                <form id="wiz-form">
+                    <!-- STEP 1 -->
+                    <div class="panel active" data-p="1">
+                        <h4>Tell us about your business</h4>
+                        <div class="fg2">
+                            <label class="fg"><span>Industry</span><select id="w-industry" required><option value="" disabled selected>Select</option><option value="qsr">QSR / Restaurant / Cloud Kitchen</option><option value="salon">Salon / Spa / Beauty</option><option value="retail">Retail / E-commerce</option><option value="healthcare">Healthcare / Clinic</option><option value="education">Education / Coaching</option><option value="manufacturing">Manufacturing</option><option value="realestate">Real Estate</option><option value="logistics">Logistics / Distribution</option><option value="professional">Professional Services</option><option value="other">Other</option></select></label>
+                            <label class="fg"><span>Years in operation</span><select id="w-years" required><option value="" disabled selected>Select</option><option value="0-1">Less than 1 year</option><option value="1-3">1 – 3 years</option><option value="3-5">3 – 5 years</option><option value="5-10">5 – 10 years</option><option value="10+">10+ years</option></select></label>
+                            <label class="fg"><span>Number of employees</span><select id="w-emp" required><option value="" disabled selected>Select</option><option value="1-5">1 – 5</option><option value="6-20">6 – 20</option><option value="21-50">21 – 50</option><option value="51-200">51 – 200</option><option value="200+">200+</option></select></label>
+                            <label class="fg"><span>Monthly revenue range</span><select id="w-rev" required><option value="" disabled selected>Select</option><option value="under5k">Under $5K</option><option value="5k-20k">$5K – $20K</option><option value="20k-100k">$20K – $100K</option><option value="100k-500k">$100K – $500K</option><option value="500k+">$500K+</option></select></label>
+                        </div>
+                        <button type="button" class="btn wnext" data-next="2"><span>Next: Tech & Ops</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                    </div>
+                    <!-- STEP 2 -->
+                    <div class="panel" data-p="2">
+                        <h4>How do you run day-to-day operations?</h4>
+                        <div class="fg2">
+                            <label class="fg"><span>Billing / POS system?</span><select id="w-pos" required><option value="" disabled selected>Select</option><option value="manual">Cash register / manual</option><option value="basic-pos">Basic POS machine</option><option value="cloud-pos">Cloud POS (Square, Lightspeed…)</option><option value="integrated">Fully integrated POS + inventory</option></select></label>
+                            <label class="fg"><span>Bookings / orders taken how?</span><select id="w-orders" required><option value="" disabled selected>Select</option><option value="walkin">Walk-in / counter only</option><option value="phone">Phone & WhatsApp</option><option value="aggregator">Aggregator apps (Swiggy, Uber…)</option><option value="own-system">Own online system / app</option><option value="multi">Multiple channels integrated</option></select></label>
+                            <label class="fg"><span>Inventory / stock tracking?</span><select id="w-inventory" required><option value="" disabled selected>Select</option><option value="dont">Don't really track</option><option value="manual">Manual count / diary</option><option value="spreadsheet">Excel / Google Sheets</option><option value="software">Inventory management software</option><option value="automated">Automated with alerts</option></select></label>
+                            <label class="fg"><span>Daily digital tools?</span><select id="w-tools" required><option value="" disabled selected>Select</option><option value="none">None — pen & paper</option><option value="basic">WhatsApp + Excel only</option><option value="some">A few apps (Tally, POS, social)</option><option value="suite">Full suite (CRM, ERP, analytics)</option></select></label>
+                            <label class="fg"><span>Sales & expense tracking?</span><select id="w-finance" required><option value="" disabled selected>Select</option><option value="memory">Memory / mental notes</option><option value="diary">Register / diary</option><option value="spreadsheet">Spreadsheet</option><option value="accounting">Accounting software</option><option value="integrated">Integrated with POS + bank feeds</option></select></label>
+                            <label class="fg"><span>Item / service-wise profitability?</span><select id="w-profit" required><option value="" disabled selected>Select</option><option value="no">No</option><option value="roughly">Roughly / gut feeling</option><option value="detailed">Yes, detailed analysis</option></select></label>
+                        </div>
+                        <div class="wiz-btns"><button type="button" class="btn-o wprev" data-prev="1"><span>← Back</span></button><button type="button" class="btn wnext" data-next="3"><span>Next: Digital & Growth</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+                    </div>
+                    <!-- STEP 3 -->
+                    <div class="panel" data-p="3">
+                        <h4>Digital presence & growth ambitions</h4>
+                        <div class="fg2">
+                            <label class="fg"><span>Website?</span><select id="w-website" required><option value="" disabled selected>Select</option><option value="none">No website</option><option value="basic">Basic / template</option><option value="pro">Professional</option><option value="ecom">E-commerce / booking enabled</option></select></label>
+                            <label class="fg"><span>Social media?</span><select id="w-social" required><option value="" disabled selected>Select</option><option value="none">No presence</option><option value="inactive">Profiles exist, rarely post</option><option value="active">Regular posting</option><option value="paid">Paid ads + strategy</option></select></label>
+                            <label class="fg"><span>Customer data collection?</span><select id="w-custdata" required><option value="" disabled selected>Select</option><option value="dont">Don't collect</option><option value="phone-contacts">Phone contacts / diary</option><option value="spreadsheet">Spreadsheet</option><option value="crm">CRM / loyalty software</option></select></label>
+                            <label class="fg"><span>Know your acquisition cost?</span><select id="w-cac" required><option value="" disabled selected>Select</option><option value="no">Don't know what that is</option><option value="rough">Aware but don't track</option><option value="track">Track it</option><option value="optimize">Actively optimize it</option></select></label>
+                            <label class="fg full"><span>% repeat / loyal customers</span><div class="rng"><input type="range" id="w-repeat" min="0" max="100" value="40" step="5"><div class="rng-v"><b id="rval">40</b>%</div></div></label>
+                            <label class="fg"><span>Biggest challenge?</span><select id="w-challenge" required><option value="" disabled selected>Select</option><option value="customers">Getting more customers</option><option value="retention">Customer retention</option><option value="operations">Managing operations</option><option value="cashflow">Cash flow / profitability</option><option value="scale">Scaling to new locations</option><option value="competition">Competing with larger players</option><option value="data">Lack of data / insights</option></select></label>
+                            <label class="fg"><span>Growth goal (12 months)?</span><select id="w-goal" required><option value="" disabled selected>Select</option><option value="maintain">Maintain current</option><option value="10-25">10 – 25% growth</option><option value="25-50">25 – 50% growth</option><option value="50+">50%+ aggressive</option><option value="expand">Expand to new markets</option></select></label>
+                        </div>
+                        <div class="wiz-btns"><button type="button" class="btn-o wprev" data-prev="2"><span>← Back</span></button><button type="submit" class="btn"><span>Analyze My Business</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- RESULT -->
+            <div id="result" class="result hidden">
+                <div class="glass-card result-inner">
+                    <div class="radar-col"><svg id="radar" viewBox="0 0 300 300"></svg></div>
+                    <div class="verdict-col">
+                        <div class="ring-wrap"><svg viewBox="0 0 130 130"><circle cx="65" cy="65" r="58" fill="none" stroke="rgba(74,222,128,.1)" stroke-width="8"/><circle id="rprog" cx="65" cy="65" r="58" fill="none" stroke="url(#rg)" stroke-width="8" stroke-linecap="round" stroke-dasharray="364.42" stroke-dashoffset="364.42" transform="rotate(-90 65 65)"/><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg><div class="ring-n"><b id="snum">0</b><small>%</small></div></div>
+                        <h3 id="vtitle"></h3>
+                        <p id="vdesc"></p>
+                        <div class="bd" id="bd"></div>
+                        <button type="button" class="btn-o" onclick="resetWiz()"><span>↻ Retake</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONNECT ═══ -->
+    <section id="connect">
+        <div class="glow-orb orb-4"></div>
+        <div class="sec-inner">
+            <div class="sec-head rv">
+                <span class="tag">— Start a Conversation —</span>
+                <h2>Let's Build Something<br><em class="glow-text">Extraordinary</em></h2>
+            </div>
+            <div class="glass-card connect-grid rv">
+                <div class="con-info">
+                    <h3>Initiate Your Transformation</h3>
+                    <p>Share your details and we'll craft a tailored roadmap. No obligations — just possibilities.</p>
+                    <ul class="perks">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Free 30-min discovery call</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom strategy blueprint</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Zero commitment required</li>
+                    </ul>
+                </div>
+                <form id="book-form" class="con-form">
+                    <input type="text" id="b-hp" name="website_url" style="display:none;" autocomplete="off" tabindex="-1">
+                    <label class="fg"><span>Your Name</span><input type="text" id="b-name" placeholder="Jane Doe" required></label>
+                    <label class="fg"><span>Phone Number</span><input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required></label>
+                    <label class="fg"><span>Looking for?</span><select id="b-purpose" required><option value="" disabled selected>Select</option><option>Tech Transformation</option><option>Web Design / App</option><option>AI Integration</option><option>Marketing & Branding</option><option>General Consultation</option><option>Something Else</option></select></label>
+                    <button type="submit" class="btn magnetic"><span>Initiate Bridge</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS -->
+    <div id="success" class="overlay hidden">
+        <div class="overlay-box">
+            <svg class="suc-svg" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" stroke="#4ADE80" stroke-width="3" fill="none"/><polyline class="ck" points="24,42 36,54 56,30" stroke="#4ADE80" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Bridge Initiated!</h3>
+            <p>Our team will reach out within 24 hours to schedule your discovery call.</p>
+            <button class="btn-o" onclick="closeOv()"><span>Back to site</span></button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft-top">
+            <div class="ft-brand">
+                <svg viewBox="0 0 120 50" fill="none" class="ft-ic"><path d="M8 42Q60-5 112 42" stroke="url(#fg)" stroke-width="2" fill="none"/><line x1="4" y1="42" x2="116" y2="42" stroke="url(#fg)" stroke-width="2"/><defs><linearGradient id="fg"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg>
+                <b>KNOTBRIDGE</b>
+                <p><em>Tying required tech to your business to grow, sustain, and be efficient.</em></p>
+            </div>
+            <div class="ft-cols">
+                <div><h4>Services</h4><a href="#services">Tech Transformation</a><a href="#services">Web & Apps</a><a href="#services">AI Integration</a><a href="#services">Marketing</a></div>
+                <div><h4>Company</h4><a href="#hero">About</a><a href="#assess">Assessment</a><a href="#connect">Contact</a></div>
+            </div>
+        </div>
+        <div class="ft-bot"><p>&copy; 2024 Knotbridge</p><p>Made with purpose & precision</p></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
