@@ -393,17 +393,18 @@
         nav.classList.remove('scrolled');
       }
       lastScroll = scrollY;
-    });
+    }, { passive: true });
 
     // Hero parallax
     const heroBg = document.querySelector('.hero-bg-image');
     if (heroBg) {
       window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) return; // Disable parallax on mobile for performance
         const scrollY = window.scrollY;
         if (scrollY < window.innerHeight) {
           heroBg.style.transform = `scale(1.1) translateY(${scrollY * 0.3}px)`;
         }
-      });
+      }, { passive: true });
     }
   }
 
