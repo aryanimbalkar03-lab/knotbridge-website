@@ -30,7 +30,8 @@
 }
 
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:var(--sans);color:var(--txt);background:var(--bg);overflow-x:hidden;cursor:none;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
+html,body{overflow-x:hidden;width:100%;max-width:100vw}
+body{font-family:var(--sans);color:var(--txt);background:var(--bg);cursor:none;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}
 a{text-decoration:none;color:inherit}
 button{border:none;background:none;font-family:inherit;cursor:none}
 select,input,textarea{font-family:inherit;cursor:none;outline:none}
