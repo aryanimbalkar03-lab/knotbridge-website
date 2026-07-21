@@ -289,43 +289,71 @@ select,input,textarea{font-family:inherit;cursor:none;outline:none}
 .bd-i .bf{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--g500),var(--g400));transition:width 1.1s var(--ease);width:0;box-shadow:0 0 8px rgba(74,222,128,.3)}
 .bd-i .bv{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--g400);margin-top:4px}
 
-/* --- THE DIGITAL FORGE (PROCESS) --- */
-#process{padding:120px 0;position:relative}
-.forge-container{display:flex;justify-content:center;gap:30px;margin-top:60px;flex-wrap:wrap;position:relative}
-.forge-node{position:relative;width:200px;height:200px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--tr)}
-.node-orb{width:60px;height:60px;border-radius:50%;background:var(--glass-bg);border:1px solid var(--glass-b);display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--neon);font-size:1.2rem;box-shadow:0 0 20px rgba(189,255,0,0.1);transition:all var(--tr);z-index:2;position:absolute}
-.node-content{opacity:0;position:absolute;width:280px;background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--neon);padding:30px;border-radius:24px;transform:scale(0.8) translateY(20px);transition:all 0.5s cubic-bezier(0.16,1,0.3,1);pointer-events:none;z-index:1;text-align:left;box-shadow:0 20px 40px rgba(0,0,0,0.5),0 0 30px rgba(189,255,0,0.1)}
-.node-content h3{margin-bottom:10px;font-size:1.2rem}
-.node-content p{font-size:0.9rem;color:var(--txt-m);line-height:1.5}
-.forge-node:hover .node-orb{transform:scale(1.2);box-shadow:0 0 40px rgba(189,255,0,0.3);background:var(--neon);color:var(--bg)}
-.forge-node:hover .node-content{opacity:1;transform:scale(1) translateY(-100px);pointer-events:auto}
-.forge-container:hover .forge-node:not(:hover){opacity:0.3;filter:blur(2px)}
+/* ══ THE DIGITAL FORGE (PROCESS) ══ */
+#process{position:relative;padding:clamp(80px,12vw,150px) 0;background:var(--bg2);overflow:hidden}
+#process .sec-inner h2{font-family:var(--serif);font-size:clamp(28px,4.5vw,50px);font-weight:700;color:#fff;text-align:center;margin-bottom:8px}
+#process .subtitle{font-size:14px;color:var(--txt2);text-align:center;max-width:480px;margin:0 auto 60px;line-height:1.65}
+.accent{background:linear-gradient(135deg,var(--g500),var(--g400),var(--g300));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic}
 
-/* --- HOLOGRAPHIC DECK (TESTIMONIALS) --- */
-#testimonials{padding:120px 0;overflow:hidden;perspective:1000px}
-.deck-container{position:relative;width:100%;max-width:500px;height:400px;margin:60px auto 0;transform-style:preserve-3d}
-.deck-card{position:absolute;top:0;left:0;width:100%;background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--glass-b);border-radius:30px;padding:40px;box-shadow:0 30px 60px rgba(0,0,0,0.4);transition:all 0.6s cubic-bezier(0.16,1,0.3,1);transform-origin:bottom center}
-.deck-card.active{transform:translateZ(0) translateY(0) rotateX(0);opacity:1;z-index:3;pointer-events:auto}
-.deck-card.next-1{transform:translateZ(-50px) translateY(20px) rotateX(5deg);opacity:0.6;z-index:2;pointer-events:none}
-.deck-card.next-2{transform:translateZ(-100px) translateY(40px) rotateX(10deg);opacity:0.3;z-index:1;pointer-events:none}
-.deck-card.next-hidden{transform:translateZ(-150px) translateY(60px) rotateX(15deg);opacity:0;z-index:0;pointer-events:none}
-.deck-card.swiped{transform:translateZ(100px) translateX(-150%) rotateY(-20deg);opacity:0;pointer-events:none}
-.deck-card .metric{font-family:var(--mono);font-size:4rem;font-weight:700;line-height:1;margin-bottom:10px;text-shadow:0 0 30px rgba(189,255,0,0.2)}
-.deck-card .metric-label{font-family:var(--mono);font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;color:var(--txt-m);margin-bottom:30px}
-.deck-card .quote{font-size:1.1rem;line-height:1.6;margin-bottom:30px;font-style:italic}
-.deck-card .client-info{font-family:var(--mono);font-size:0.9rem;color:var(--neon)}
-.deck-controls{text-align:center;margin-top:40px}
+.forge-container{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.forge-node{position:relative;background:var(--glass);border:1px solid var(--glass-b);border-radius:22px;padding:36px 28px;text-align:center;overflow:hidden;transition:border-color .45s,box-shadow .45s,transform .5s var(--ease)}
+.forge-node::before{content:'';position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(74,222,128,.06),transparent 50%);opacity:0;transition:opacity .4s;pointer-events:none;border-radius:inherit}
+.forge-node:hover::before{opacity:1}
+.forge-node:hover{border-color:var(--glass-h);box-shadow:0 0 60px rgba(74,222,128,.08),inset 0 0 60px rgba(74,222,128,.02);transform:translateY(-6px)}
 
-/* --- DECRYPTION TERMINAL (FAQ) --- */
-#faq{padding:120px 0}
-.terminal-container{max-width:800px;margin:60px auto 0;background:rgba(10,10,10,0.6);border:1px solid var(--glass-b);border-radius:16px;padding:30px;font-family:var(--mono);backdrop-filter:blur(10px)}
-.terminal-line{margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:20px}
-.terminal-line:last-child{margin-bottom:0;border-bottom:none;padding-bottom:0}
-.terminal-prompt{color:var(--neon);cursor:pointer;font-size:1rem;transition:color var(--tr)}
-.terminal-prompt:hover{color:var(--txt)}
-.terminal-prompt::after{content:'_';animation:blink 1s infinite step-end}
-.terminal-response{height:0;overflow:hidden;opacity:0;color:var(--txt-m);margin-top:0;font-size:0.9rem;line-height:1.6;transition:all 0.4s ease-out}
-.terminal-line.active .terminal-response{height:auto;opacity:1;margin-top:15px}
+.node-orb{width:64px;height:64px;border-radius:50%;background:rgba(74,222,128,.06);border:1.5px solid var(--g200);display:flex;align-items:center;justify-content:center;font-family:var(--serif);color:var(--g400);font-size:22px;font-weight:700;margin:0 auto 24px;box-shadow:0 0 20px rgba(74,222,128,.1);transition:all .45s var(--ease)}
+.forge-node:hover .node-orb{background:var(--g500);color:#fff;border-color:var(--g500);box-shadow:0 0 40px rgba(34,197,94,.35);transform:scale(1.1)}
+
+.node-content h3{font-family:var(--serif);font-size:clamp(17px,2vw,20px);font-weight:700;color:#fff;margin-bottom:12px}
+.node-content p{font-size:13px;color:var(--txt2);line-height:1.7}
+
+/* Connector line between orbs (desktop only) */
+.forge-container::after{content:'';position:absolute;top:68px;left:calc(12.5% + 32px);right:calc(12.5% + 32px);height:1px;background:linear-gradient(90deg,transparent,var(--g200),var(--g400),var(--g200),transparent);pointer-events:none;z-index:0}
+
+/* ══ HOLOGRAPHIC DECK (TESTIMONIALS) ══ */
+#testimonials{position:relative;padding:clamp(80px,12vw,150px) 0;background:var(--bg3);overflow:visible}
+#testimonials .sec-inner h2{font-family:var(--serif);font-size:clamp(28px,4.5vw,50px);font-weight:700;color:#fff;text-align:center;margin-bottom:8px}
+#testimonials .subtitle{font-size:14px;color:var(--txt2);text-align:center;max-width:480px;margin:0 auto 0;line-height:1.65}
+
+.deck-container{position:relative;width:100%;max-width:520px;height:380px;margin:60px auto 0;perspective:1200px}
+.deck-card{position:absolute;top:0;left:0;width:100%;background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--glass-b);border-radius:24px;padding:clamp(28px,4vw,44px);box-shadow:0 30px 60px rgba(0,0,0,.4);transition:all .65s var(--ease);transform-style:preserve-3d;transform-origin:bottom center;cursor:pointer}
+.deck-card.active{transform:translateZ(0) translateY(0) scale(1);opacity:1;z-index:3;pointer-events:auto}
+.deck-card.next-1{transform:translateZ(-40px) translateY(16px) scale(.96);opacity:.55;z-index:2;pointer-events:none}
+.deck-card.next-2{transform:translateZ(-80px) translateY(32px) scale(.92);opacity:.25;z-index:1;pointer-events:none}
+.deck-card.next-hidden{transform:translateZ(-120px) translateY(48px) scale(.88);opacity:0;z-index:0;pointer-events:none}
+.deck-card.swiped{transform:translateX(-130%) rotateZ(-12deg);opacity:0;pointer-events:none;transition:all .55s var(--ease)}
+
+.deck-card .metric{font-family:var(--serif);font-size:clamp(48px,7vw,64px);font-weight:900;line-height:1;margin-bottom:6px}
+.deck-card .metric .accent{filter:drop-shadow(0 0 20px rgba(74,222,128,.2))}
+.deck-card .metric-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--g500);margin-bottom:24px}
+.deck-card .quote{font-family:var(--serif);font-size:clamp(15px,2vw,18px);line-height:1.65;margin-bottom:24px;color:var(--txt);font-style:italic}
+.deck-card .client-info{font-size:12px;font-weight:600;color:var(--g400);letter-spacing:.5px}
+
+.deck-controls{text-align:center;margin-top:30px}
+.deck-controls .btn{cursor:pointer}
+
+/* ══ DECRYPTION TERMINAL (FAQ) ══ */
+#faq{position:relative;padding:clamp(80px,12vw,150px) 0;background:var(--bg);overflow:hidden}
+#faq .sec-inner h2{font-family:var(--serif);font-size:clamp(28px,4.5vw,50px);font-weight:700;color:#fff;text-align:center;margin-bottom:8px}
+#faq .subtitle{font-size:14px;color:var(--txt2);text-align:center;max-width:480px;margin:0 auto 0;line-height:1.65}
+
+.terminal-container{max-width:760px;margin:60px auto 0;background:rgba(8,20,16,.7);border:1px solid var(--glass-b);border-radius:20px;overflow:hidden;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+/* Terminal header bar */
+.terminal-container::before{content:'> KNOTBRIDGE_SYS v3.1  —  QUERY MODE';display:block;padding:14px 24px;font-size:10px;font-weight:600;letter-spacing:2px;color:var(--g500);background:rgba(74,222,128,.04);border-bottom:1px solid var(--glass-b)}
+
+.terminal-line{padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.03);transition:background .3s;cursor:pointer}
+.terminal-line:last-child{border-bottom:none}
+.terminal-line:hover{background:rgba(74,222,128,.02)}
+
+.terminal-prompt{font-size:14px;font-weight:500;color:var(--g400);display:flex;align-items:center;gap:10px;transition:color .3s}
+.terminal-prompt::before{content:'>';font-weight:700;color:var(--g500);font-size:16px}
+.terminal-prompt::after{content:'_';color:var(--g400);animation:blink 1s infinite step-end;margin-left:2px}
+.terminal-line.active .terminal-prompt::after{content:'';animation:none}
+
+.terminal-response{max-height:0;overflow:hidden;opacity:0;color:var(--txt2);margin-top:0;font-size:13px;line-height:1.75;transition:max-height .5s var(--ease),opacity .4s .1s,margin-top .4s;padding-left:22px;border-left:2px solid transparent}
+.terminal-line.active .terminal-response{max-height:200px;opacity:1;margin-top:14px;border-left-color:var(--g500)}
+
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
 /* ── CONNECT ── */
@@ -381,29 +409,28 @@ footer{background:var(--bg);border-top:1px solid var(--g100);padding:52px 40px 2
   .bd{grid-template-columns:1fr}
   
   /* Mobile Process */
-  #process{padding:80px 0}
-  .forge-container{gap:15px;flex-direction:column;align-items:center}
-  .forge-node{width:100%;height:auto;margin-bottom:20px}
-  .node-orb{position:relative;margin-bottom:10px}
-  .node-content{position:relative;opacity:1;transform:none!important;pointer-events:auto;width:100%;text-align:center;padding:20px}
-  .forge-node:hover .node-orb{transform:none}
-  .forge-node:hover .node-content{transform:none}
-  .forge-container:hover .forge-node:not(:hover){opacity:1;filter:none}
+  .forge-container{grid-template-columns:1fr 1fr;gap:16px}
+  .forge-container::after{display:none}
+  .node-orb{width:50px;height:50px;font-size:18px;margin-bottom:18px}
+  .node-content h3{font-size:16px}
   
   /* Mobile Deck */
-  #testimonials{padding:80px 0}
-  .deck-container{height:450px}
-  .deck-card{padding:25px}
-  .deck-card .metric{font-size:3rem}
+  .deck-container{max-width:100%;height:420px}
+  .deck-card{padding:28px}
+  .deck-card .metric{font-size:42px}
+  .deck-card .quote{font-size:14px}
   
   /* Mobile Terminal */
-  #faq{padding:80px 0}
-  .terminal-container{padding:20px}
-  .terminal-prompt{font-size:0.9rem}
+  .terminal-prompt{font-size:13px}
+  .terminal-response{font-size:12px}
 }
 @media(max-width:600px){
   body{cursor:auto}
   #cur,#ring{display:none!important}
   .hero-title{letter-spacing:3px}
   .hero-btns{flex-direction:column}
+  
+  /* Small mobile Process */
+  .forge-container{grid-template-columns:1fr}
+  .forge-node{padding:28px 22px}
 }
