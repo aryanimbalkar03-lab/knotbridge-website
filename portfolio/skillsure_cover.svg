@@ -1,0 +1,29 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400' width='100%' height='100%'>
+  <!-- Background -->
+  <rect width='800' height='400' fill='#152A56' />
+  
+  <!-- Logo Icon Box -->
+  <g transform='translate(100, 100) scale(1.5)'>
+    <!-- Box outline -->
+    <rect x='0' y='0' width='100' height='100' fill='none' stroke='#275AA3' stroke-width='3' />
+    
+    <!-- Top Left: Cyan Quarter Circle (Top Right pointing) -->
+    <path d='M 15 15 L 50 15 A 35 35 0 0 1 15 50 Z' fill='#00F0FF' />
+    
+    <!-- Top Right: Cyan Circle -->
+    <circle cx='70' cy='32.5' r='17.5' fill='#33FFC7' />
+    
+    <!-- Bottom Left: Blue Diamond -->
+    <path d='M 32.5 55 L 45 70 L 32.5 85 L 20 70 Z' fill='#0F52FF' />
+    
+    <!-- Bottom Right: Blue Leaf -->
+    <path d='M 50 50 A 35 35 0 0 1 85 85 L 50 85 Z' fill='#0066FF' />
+  </g>
+  
+  <!-- SKILLSURE Text -->
+  <g transform='translate(310, 215)'>
+    <text font-family='Arial, sans-serif' font-weight='900' font-size='100' letter-spacing='-2'>
+      <tspan fill='#FFFFFF'>SKILL</tspan><tspan fill='#3AC8F5'>SURE</tspan>
+    </text>
+  </g>
+</svg>
