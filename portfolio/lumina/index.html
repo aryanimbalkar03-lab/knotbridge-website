@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina Residency — 3D Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@100;300&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-BLNpz9T8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-jpTjhMOJ.css">
+  </head>
+  <body>
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl"></canvas>
+
+    <!-- Top Navigation -->
+    <nav class="main-nav">
+      <div class="nav-logo">LUMINA</div>
+      <div class="nav-links">
+        <a href="#vision">Vision</a>
+        <a href="#services">Services</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <button class="nav-btn">Inquire</button>
+    </nav>
+
+    <!-- Fixed HUD Overlay -->
+    <div id="hud">
+      <div class="hud-top">
+        <div class="coords">LAT: 34.0522° N <br> LNG: 118.2437° W</div>
+      </div>
+      <div class="hud-bottom">
+        <div class="status">SYSTEM ONLINE // RENDER ACTIVE</div>
+        <div class="scroll-prompt">SCROLL TO EXPLORE ↓</div>
+      </div>
+    </div>
+
+    <!-- Scroll Content Overlay -->
+    <div id="scroll-container">
+      
+      <!-- HERO -->
+      <section class="step" id="vision">
+        <div class="content">
+          <p class="overline">01 // THE VISION</p>
+          <h2>A New Paradigm<br>in Architecture.</h2>
+          <p class="desc">Where raw geometry meets ethereal light. Lumina Residency is engineered for those who demand absolute perfection in their physical spaces.</p>
+        </div>
+      </section>
+      
+      <!-- BRAND STORY -->
+      <section class="step">
+        <div class="content right">
+          <p class="overline">02 // BRAND STORY</p>
+          <h2>Parametric<br>Precision.</h2>
+          <p class="desc">Every beam and glass panel is procedurally generated to optimize natural light flow and structural integrity. Lumina isn't just a place to live—it's a computational masterpiece.</p>
+        </div>
+      </section>
+      
+      <!-- SERVICES GRID -->
+      <section class="step" id="services">
+        <div class="content full-width">
+          <p class="overline text-center">03 // AMENITIES</p>
+          <h2 class="text-center">Engineered for Luxury.</h2>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Concierge AI</h3>
+              <p>24/7 automated climate, lighting, and security control via biometric neural links.</p>
+            </div>
+            <div class="service-card">
+              <h3>Skyline Terraces</h3>
+              <p>Procedurally generated cantilevered balconies offering 360° digital city views.</p>
+            </div>
+            <div class="service-card">
+              <h3>Zero-G Spas</h3>
+              <p>Next-generation relaxation tech utilizing magnetic levitation and sonic healing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="step" id="faq">
+        <div class="content">
+          <p class="overline">04 // INQUIRIES</p>
+          <h2>Frequently Asked.</h2>
+          
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <button class="faq-question">What is the structural integrity of the glass?<span class="icon">+</span></button>
+              <div class="faq-answer"><p>Our proprietary synthetic diamond-glass composite can withstand Category 5 hyper-storms and localized gravity anomalies.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Can the floorplans be dynamically altered?<span class="icon">+</span></button>
+              <div class="faq-answer"><p>Yes. The interior walls utilize programmable smart-matter, allowing you to instantly reconfigure your penthouse layout via the app.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">When is the residency ready for move-in?<span class="icon">+</span></button>
+              <div class="faq-answer"><p>Phase 1 beta access opens in Q4. Final architectural compilation concludes next year.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / FOOTER -->
+      <section class="step" id="step-5">
+        <div class="content center">
+          <h2>Experience Lumina</h2>
+          <button class="cta">Request Private Viewing</button>
+        </div>
+      </section>
+      
+      <footer class="main-footer">
+        <div class="footer-col">
+          <h3>LUMINA</h3>
+          <p>© 2026 Lumina Residency. All rights reserved.</p>
+        </div>
+        <div class="footer-col">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-col text-right">
+          <p>Los Angeles Sector 4<br>Neo-California, 90210</p>
+        </div>
+      </footer>
+    </div>
+
+  </body>
+</html>
