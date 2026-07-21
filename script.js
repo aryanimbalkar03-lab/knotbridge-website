@@ -527,6 +527,75 @@ document.getElementById('book-form')?.addEventListener('submit', async e => {
     }
 });
 
+// --- HOLOGRAPHIC DECK (TESTIMONIALS) ---
+const deckCards = document.querySelectorAll('.deck-card');
+let currentCard = 0;
+function updateDeck() {
+    deckCards.forEach((card, index) => {
+        card.className = 'deck-card'; // reset
+        if (index === currentCard) card.classList.add('active');
+        else if (index === (currentCard + 1) % deckCards.length) card.classList.add('next-1');
+        else if (index === (currentCard + 2) % deckCards.length) card.classList.add('next-2');
+        else card.classList.add('next-hidden');
+    });
+}
+const nextBtn = document.getElementById('deck-next');
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        deckCards[currentCard].classList.replace('active', 'swiped');
+        currentCard = (currentCard + 1) % deckCards.length;
+        setTimeout(updateDeck, 100);
+    });
+    updateDeck();
+}
+deckCards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        if (card.classList.contains('active')) {
+            card.classList.replace('active', 'swiped');
+            currentCard = (currentCard + 1) % deckCards.length;
+            setTimeout(updateDeck, 100);
+        }
+    });
+});
+
+// --- DECRYPTION TERMINAL (FAQ) ---
+const terminalLines = document.querySelectorAll('.terminal-line');
+const cipherLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
+terminalLines.forEach(line => {
+    const prompt = line.querySelector('.terminal-prompt');
+    const response = line.querySelector('.terminal-response');
+    const originalText = response.innerText;
+    
+    prompt.addEventListener('click', () => {
+        const isActive = line.classList.contains('active');
+        // Close all others
+        terminalLines.forEach(l => l.classList.remove('active'));
+        
+        if (!isActive) {
+            line.classList.add('active');
+            // Decrypt effect
+            if (response.dataset.encrypted === "true") {
+                response.dataset.encrypted = "false";
+                let iteration = 0;
+                let interval = setInterval(() => {
+                    response.innerText = originalText.split("").map((letter, index) => {
+                        if(index < iteration || letter === " ") {
+                            return originalText[index];
+                        }
+                        return cipherLetters[Math.floor(Math.random() * cipherLetters.length)];
+                    }).join("");
+                    
+                    if(iteration >= originalText.length){ 
+                        clearInterval(interval);
+                        response.innerText = originalText;
+                    }
+                    iteration += 2; // Speed of decryption
+                }, 20); 
+            }
+        }
+    });
+});
+
 window.closeOv = function() {
     document.getElementById('success').classList.add('hidden');
     document.body.style.overflow = '';
