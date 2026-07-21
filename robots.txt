@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://knotbridge-website.vercel.app/sitemap.xml
+Sitemap: https://knotbridge.vercel.app/sitemap.xml
