@@ -586,25 +586,8 @@ terminalLines.forEach(line => {
     
     prompt.addEventListener('click', () => {
         const wasActive = line.classList.contains('active');
-        // Close all
         terminalLines.forEach(l => l.classList.remove('active'));
-        
-        if (!wasActive) {
-            line.classList.add('active');
-            // Decrypt animation
-            let iteration = 0;
-            const interval = setInterval(() => {
-                textNode.textContent = originalText.split('').map((char, idx) => {
-                    if (idx < iteration || char == ' ') return originalText[idx];
-                    return cipherChars[Math.floor(Math.random() * cipherChars.length)];
-                }).join('');
-                if (iteration >= originalText.length) {
-                    clearInterval(interval);
-                    textNode.textContent = originalText;
-                }
-                iteration += 3;
-            }, 15);
-        }
+        if (!wasActive) line.classList.add('active');
     });
 });
 
