@@ -579,8 +579,10 @@ const cipherChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*!?<>{}[]";
 terminalLines.forEach(line => {
     const prompt = line.querySelector('.terminal-prompt');
     const response = line.querySelector('.terminal-response');
+    const textNode = line.querySelector('.decrypt-text') || response;
     if (!prompt || !response) return;
-    const originalText = response.textContent;
+    const originalText = textNode.dataset.otext || textNode.textContent;
+    if (!textNode.dataset.otext) textNode.dataset.otext = originalText;
     
     prompt.addEventListener('click', () => {
         const wasActive = line.classList.contains('active');
@@ -592,13 +594,13 @@ terminalLines.forEach(line => {
             // Decrypt animation
             let iteration = 0;
             const interval = setInterval(() => {
-                response.textContent = originalText.split('').map((char, idx) => {
+                textNode.textContent = originalText.split('').map((char, idx) => {
                     if (idx < iteration || char == ' ') return originalText[idx];
                     return cipherChars[Math.floor(Math.random() * cipherChars.length)];
                 }).join('');
                 if (iteration >= originalText.length) {
                     clearInterval(interval);
-                    response.textContent = originalText;
+                    textNode.textContent = originalText;
                 }
                 iteration += 3;
             }, 15);
