@@ -527,12 +527,27 @@ document.getElementById('book-form')?.addEventListener('submit', async e => {
     }
 });
 
+// --- PROCESS CASE STUDY CARDS ---
+const processCards = document.querySelectorAll('.process-card');
+processCards.forEach(card => {
+    card.addEventListener('click', () => {
+        processCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+    });
+    // Also handle mouse tracking for glow
+    card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', ${e.clientX - r.left}px);
+        card.style.setProperty('--my', ${e.clientY - r.top}px);
+    });
+});
+
 // --- HOLOGRAPHIC DECK (TESTIMONIALS) ---
 const deckCards = document.querySelectorAll('.deck-card');
 let currentCard = 0;
 function updateDeck() {
     deckCards.forEach((card, index) => {
-        card.className = 'deck-card'; // reset
+        card.className = 'deck-card';
         if (index === currentCard) card.classList.add('active');
         else if (index === (currentCard + 1) % deckCards.length) card.classList.add('next-1');
         else if (index === (currentCard + 2) % deckCards.length) card.classList.add('next-2');
@@ -548,7 +563,7 @@ if (nextBtn) {
     });
     updateDeck();
 }
-deckCards.forEach((card, index) => {
+deckCards.forEach(card => {
     card.addEventListener('click', () => {
         if (card.classList.contains('active')) {
             card.classList.replace('active', 'swiped');
@@ -560,38 +575,33 @@ deckCards.forEach((card, index) => {
 
 // --- DECRYPTION TERMINAL (FAQ) ---
 const terminalLines = document.querySelectorAll('.terminal-line');
-const cipherLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
+const cipherChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*!?<>{}[]";
 terminalLines.forEach(line => {
     const prompt = line.querySelector('.terminal-prompt');
     const response = line.querySelector('.terminal-response');
-    const originalText = response.innerText;
+    if (!prompt || !response) return;
+    const originalText = response.textContent;
     
     prompt.addEventListener('click', () => {
-        const isActive = line.classList.contains('active');
-        // Close all others
+        const wasActive = line.classList.contains('active');
+        // Close all
         terminalLines.forEach(l => l.classList.remove('active'));
         
-        if (!isActive) {
+        if (!wasActive) {
             line.classList.add('active');
-            // Decrypt effect
-            if (response.dataset.encrypted === "true") {
-                response.dataset.encrypted = "false";
-                let iteration = 0;
-                let interval = setInterval(() => {
-                    response.innerText = originalText.split("").map((letter, index) => {
-                        if(index < iteration || letter === " ") {
-                            return originalText[index];
-                        }
-                        return cipherLetters[Math.floor(Math.random() * cipherLetters.length)];
-                    }).join("");
-                    
-                    if(iteration >= originalText.length){ 
-                        clearInterval(interval);
-                        response.innerText = originalText;
-                    }
-                    iteration += 2; // Speed of decryption
-                }, 20); 
-            }
+            // Decrypt animation
+            let iteration = 0;
+            const interval = setInterval(() => {
+                response.textContent = originalText.split('').map((char, idx) => {
+                    if (idx < iteration || char == ' ') return originalText[idx];
+                    return cipherChars[Math.floor(Math.random() * cipherChars.length)];
+                }).join('');
+                if (iteration >= originalText.length) {
+                    clearInterval(interval);
+                    response.textContent = originalText;
+                }
+                iteration += 3;
+            }, 15);
         }
     });
 });
