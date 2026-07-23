@@ -43,12 +43,15 @@
         }
         .port-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 5%;
             padding-bottom: 100px;
+        }
+        @media(max-width: 768px) {
+            .port-grid { grid-template-columns: 1fr; }
         }
         .port-item {
             text-decoration: none;
@@ -57,7 +60,7 @@
             cursor: pointer;
         }
         .port-img {
-            height: 280px;
+            height: 340px; /* Taller for 2-col layout */
             background: #111;
             border-radius: 12px;
             margin-bottom: 24px;
@@ -105,37 +108,30 @@
     <div id="cur"></div>
     <div id="ring"></div>
 
-    <!-- NAVBAR -->
-    <nav id="nav">
-        <a href="index.html#hero" class="n-brand">
-            <svg viewBox="0 0 120 50" fill="none" class="n-icon"><path d="M8 42Q60-5 112 42" stroke="url(#ng)" stroke-width="2.5" fill="none"/><line x1="4" y1="42" x2="116" y2="42" stroke="url(#ng)" stroke-width="2"/><defs><linearGradient id="ng"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg>
+    <!-- HEADER -->
+    <header id="nav">
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 120 50" fill="none"><path d="M8 42Q60-5 112 42" stroke="url(#g1)" stroke-width="2" fill="none"/><line x1="4" y1="42" x2="116" y2="42" stroke="url(#g1)" stroke-width="2"/><defs><linearGradient id="g1"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#4ADE80"/></linearGradient></defs></svg>
             <span>KNOTBRIDGE</span>
         </a>
-        <div class="n-links"><a href="index.html#services">Services</a><a href="portfolio.html">Portfolio</a><a href="index.html#assess">Assessment</a></div>
-        <a href="index.html#connect" class="n-cta magnetic">Let's Bridge the Gap <i>→</i></a>
-        <button id="burger" class="burger" aria-label="menu"><span></span><span></span></button>
-    </nav>
+        <div class="n-links">
+            <a href="index.html#services">Services</a>
+            <a href="portfolio.html">Work</a>
+            <a href="index.html#why-us">Why Us</a>
+        </div>
+        <a href="index.html#connect" class="n-cta">Start Project</a>
+        <div class="burger"><span></span><span></span></div>
+    </header>
 
-    <div id="drawer" class="drawer">
-        <a href="index.html#services">Services</a><a href="portfolio.html">Portfolio</a><a href="index.html#assess">Assessment</a><a href="index.html#connect">Let's Bridge the Gap</a>
+    <div class="portfolio-header">
+        <h1 style="font-family:var(--serif); font-size: clamp(36px, 6vw, 64px); color:#fff; margin-bottom:16px;">Our Vanguard Work</h1>
+        <p style="color:var(--txt2); font-size:16px; max-width:600px; margin:0 auto;">A selection of our premium digital engineering. We don't just build websites; we architect business platforms.</p>
     </div>
 
-    <!-- PORTFOLIO HEADER -->
-    <section class="portfolio-header">
-        <div class="glow-orb orb-1"></div>
-        <div class="sec-inner">
-            <span class="tag">— Our Work —</span>
-            <h2>Digital <em class="glow-text">Masterpieces</em></h2>
-            <p class="sub" style="margin-top: 16px;">Explore our portfolio of high-end web applications and aesthetic transformations.</p>
-        </div>
-    </section>
-
-    <!-- FILTER TABS -->
     <div class="filter-tabs">
-        <button class="filter-tab active" onclick="filterPort('all', this)">All</button>
-        <button class="filter-tab" onclick="filterPort('hospitality', this)">Bakery / Hospitality</button>
-        <button class="filter-tab" onclick="filterPort('ecommerce', this)">E-Commerce</button>
-        <button class="filter-tab" onclick="filterPort('saas', this)">SaaS</button>
+        <button class="filter-tab active" onclick="filterPort('all', this)">All Projects</button>
+        <button class="filter-tab" onclick="filterPort('saas', this)">SaaS / Web Apps</button>
+        <button class="filter-tab" onclick="filterPort('hospitality', this)">Hospitality</button>
     </div>
 
     <!-- PORTFOLIO GRID -->
@@ -175,6 +171,19 @@
                 A cinematic 3D architectural visualization built with Three.js. Features procedurally generated structures and interactive scroll-based storytelling.
             </p>
             <div class="pills"><span>Three.js</span><span>GSAP</span><span>WebGL</span></div>
+            <div class="b-glow"></div>
+        </a>
+
+        <!-- PROJECT 4: RGA-MOTION -->
+        <a href="portfolio/rga-motion/index.html" class="glass-card port-item saas" style="--d:.2s">
+            <div class="port-img">
+                <img src="portfolio/rga-motion/images/hero-runway.png" alt="RGA Motion Aviation Academy" onerror="this.style.display='none'">
+            </div>
+            <h3 style="font-family:var(--serif); font-size:24px; color:#fff; margin-bottom:12px;">Rajiv Gandhi Aviation</h3>
+            <p style="color:var(--txt2); font-size:15px; margin-bottom:20px; line-height:1.6;">
+                A high-fidelity Framer Motion and Next.js landing experience tailored for aviation programs. Focuses on fluid scroll interactivity and responsive typography.
+            </p>
+            <div class="pills"><span>Next.js</span><span>Framer Motion</span><span>Tailwind</span></div>
             <div class="b-glow"></div>
         </a>
 
